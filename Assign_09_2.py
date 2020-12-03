@@ -69,11 +69,11 @@ H2O = np.array([0,
 #    [-H20, O, N, -B, -P, -CO2] [x] = [-S]
 A = np.array([Oxygen, NH3, Protein, Biomass, CO2, H2O]).transpose()
 print(A)
-B = Glucose
+B = -Glucose
 
 X = np.linalg.solve(A, B)
 print(X)
 
 # # matrices might be wrong
-# print('NH3: ', X[2][0] * 17/180)
-# print('O2: ', X[1][0] * 32/180)
+print('NH3: ', X[1])
+print('O2: ', X[0])
